@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+    font-size: 20px;
+    background-color: cadetblue;
+}
+
+.container{
+    background-color: white;
+    color: black;
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 2em;
+    border-radius: 5px;
+}
+
+.container button{
+    display: block;
+    margin: 15px 0px;
+    padding: 10px;
+    font-weight: 700;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(80, 105, 54);
+}
+
+.container input{
+    padding: 10px 20px;
+    width: 70%;
+    outline: 0;
+    border-radius: 5px;
+    font-weight: 800;
+    margin-top: 20px;
+    border: 2px gray solid;
+}
+
+.container button:active{
+    background-color: rgba(80, 105, 54,.5);
+}
+
+.img-box{
+    margin: 20px 0px;
+    max-height: 0px;  
+    width: 200px;   
+    border-radius: 10px;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+.img-box img{
+    width: 100%;
+    padding: 10px;
+}
+
+.img-box.show-img{
+    margin: 10px;
+    max-height: 300px;
+}  
+
+.error{
+    animation: shake .1s linear 10;
+}
+
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
